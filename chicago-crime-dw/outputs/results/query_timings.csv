@@ -1,0 +1,6 @@
+QueryID,QueryName,Description,PreIndexTimeMs,PostIndexTimeMs,SpeedupFactor,LatencyReductionPct
+Q1,District Incident and Arrest Rollup,"Aggregates incident volume, arrests, and computes arrest rate across all 22 police districts.",274.77,289.49,0.95,-5.36
+Q2,Crime Category and TimeBand Multi-Dimensional Dice,Filters for Summer months (June–August) and slices by Crime Category Group and operational TimeBand.,249.83,255.95,0.98,-2.45
+Q3,Monthly Temporal Trend and Domestic Violence Slice,"Computes multi-year monthly crime trends, domestic violence rates, and night crime volume.",245.3,253.56,0.97,-3.37
+Q4,High-Crime Community Area Violent Crime Drill-Down,"Filters for Violent Crime category in top urban community areas, drilling down to Beat and Primary Offense.",289.05,248.24,1.16,14.12
+Q5,Hour of Day by Day of Week Activity Grid (Pivot),Diurnal activity grid aggregating total reported incidents across all 168 hours of the weekly cycle.,284.1,281.76,1.01,0.82
