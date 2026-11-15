@@ -1,0 +1,6 @@
+Model,MAE,MSE,RMSE,R2
+Naive Baseline (Lag-1 Persistence),3.206,20.043,4.477,0.6286
+Simple Linear Regression (PrevWeekAvg),2.569,12.623,3.553,0.7661
+Multiple Linear Regression,2.475,11.877,3.446,0.7799
+Ridge Regression (alpha=10.0),2.466,11.733,3.425,0.7826
+Random Forest Regressor (depth=12),2.529,12.281,3.504,0.7724

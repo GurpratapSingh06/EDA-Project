@@ -1,0 +1,2 @@
+Model,Accuracy,Precision,Recall,F1_Score,ROC_AUC,TrueNegatives,FalsePositives,FalseNegatives,TruePositives
+"DecisionTreeClassifier (Pruned depth=5, Balanced)",0.7718,0.3464,0.5559,0.4268,0.7392,53300,12443,5267,6594

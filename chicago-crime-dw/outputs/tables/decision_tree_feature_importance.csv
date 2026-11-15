@@ -1,0 +1,64 @@
+Feature,Importance
+primarytype_NARCOTICS,0.4023854035069866
+primarytype_WEAPONS VIOLATION,0.28112007420041124
+primarytype_OTHER OFFENSE,0.11233333511449378
+primarytype_BATTERY,0.08665237444937934
+locationgroup_Residential,0.07366192044943079
+domesticflag,0.035700985866510285
+hour,0.0052584065380832596
+locationgroup_Public Facility / Institution,0.002116433929801105
+district_4,0.0005538812142736688
+district_18,0.00011619214495681335
+district_7,5.2796083171882495e-05
+district_11,2.1495411835979307e-05
+district_15,1.3879601179570234e-05
+district_10,1.2477881850548718e-05
+dayofweek,3.436076350720147e-07
+primarytype_HOMICIDE,0.0
+primarytype_GAMBLING,0.0
+primarytype_INTIMIDATION,0.0
+primarytype_HUMAN TRAFFICKING,0.0
+primarytype_KIDNAPPING,0.0
+primarytype_LIQUOR LAW VIOLATION,0.0
+primarytype_MOTOR VEHICLE THEFT,0.0
+isweekend,0.0
+primarytype_BURGLARY,0.0
+primarytype_CONCEALED CARRY LICENSE VIOLATION,0.0
+primarytype_CRIMINAL DAMAGE,0.0
+primarytype_CRIMINAL SEXUAL ASSAULT,0.0
+primarytype_CRIMINAL TRESPASS,0.0
+primarytype_DECEPTIVE PRACTICE,0.0
+isnightincident,0.0
+primarytype_ASSAULT,0.0
+primarytype_ROBBERY,0.0
+primarytype_PUBLIC PEACE VIOLATION,0.0
+primarytype_PUBLIC INDECENCY,0.0
+primarytype_PROSTITUTION,0.0
+primarytype_OTHER NARCOTIC VIOLATION,0.0
+primarytype_OFFENSE INVOLVING CHILDREN,0.0
+primarytype_OBSCENITY,0.0
+primarytype_NON-CRIMINAL,0.0
+primarytype_INTERFERENCE WITH PUBLIC OFFICER,0.0
+locationgroup_Street & Outdoor,0.0
+primarytype_STALKING,0.0
+locationgroup_Transit & Vehicles,0.0
+district_12,0.0
+locationgroup_Other/Unknown,0.0
+primarytype_THEFT,0.0
+primarytype_SEX OFFENSE,0.0
+district_17,0.0
+district_16,0.0
+district_14,0.0
+district_19,0.0
+district_22,0.0
+district_24,0.0
+district_2,0.0
+district_20,0.0
+district_3,0.0
+district_25,0.0
+district_5,0.0
+district_31,0.0
+district_6,0.0
+district_61,0.0
+district_8,0.0
+district_9,0.0

@@ -1,0 +1,13 @@
+RuleID,Antecedents,Consequents,Support,Confidence,Lift,Interpretation
+Rule 1,Type:NARCOTICS,"Arrest:Yes, Domestic:No, Loc:Street & Outdoor",0.0218,0.8099,11.9332,Proactive narcotics street enforcement intrinsically yields on-scene custodial arrests.
+Rule 2,"Arrest:Yes, Domestic:No, Loc:Street & Outdoor",Type:NARCOTICS,0.0218,0.3213,11.9332,"Strong contextual co-occurrence between Arrest:Yes, Domestic:No, Loc:Street & Outdoor and Type:NARCOTICS."
+Rule 3,"Arrest:Yes, Loc:Street & Outdoor","Type:NARCOTICS, Domestic:No",0.0218,0.2993,11.1365,"Strong contextual co-occurrence between Arrest:Yes, Loc:Street & Outdoor and Type:NARCOTICS, Domestic:No."
+Rule 4,"Type:NARCOTICS, Domestic:No","Arrest:Yes, Loc:Street & Outdoor",0.0218,0.8112,11.1365,Proactive narcotics street enforcement intrinsically yields on-scene custodial arrests.
+Rule 5,Type:NARCOTICS,"Arrest:Yes, Loc:Street & Outdoor",0.0218,0.8105,11.1264,Proactive narcotics street enforcement intrinsically yields on-scene custodial arrests.
+Rule 6,"Arrest:Yes, Loc:Street & Outdoor",Type:NARCOTICS,0.0218,0.2996,11.1264,"Strong contextual co-occurrence between Arrest:Yes, Loc:Street & Outdoor and Type:NARCOTICS."
+Rule 7,"Type:NARCOTICS, Loc:Street & Outdoor","Arrest:Yes, Domestic:No",0.0218,0.9725,8.0884,Proactive narcotics street enforcement intrinsically yields on-scene custodial arrests.
+Rule 8,Type:NARCOTICS,"Arrest:Yes, Domestic:No",0.026,0.9646,8.023,Proactive narcotics street enforcement intrinsically yields on-scene custodial arrests.
+Rule 9,"Arrest:Yes, Domestic:No",Type:NARCOTICS,0.026,0.216,8.023,"Strong contextual co-occurrence between Arrest:Yes, Domestic:No and Type:NARCOTICS."
+Rule 10,"Type:NARCOTICS, Domestic:No, Loc:Street & Outdoor",Arrest:Yes,0.0218,0.9734,6.5161,Proactive narcotics street enforcement intrinsically yields on-scene custodial arrests.
+Rule 11,"Type:NARCOTICS, Loc:Street & Outdoor",Arrest:Yes,0.0218,0.9732,6.5151,Proactive narcotics street enforcement intrinsically yields on-scene custodial arrests.
+Rule 12,"Type:NARCOTICS, Domestic:No",Arrest:Yes,0.026,0.9662,6.4683,Proactive narcotics street enforcement intrinsically yields on-scene custodial arrests.
