@@ -1,0 +1,24 @@
+Metric,Value
+Total Raw Records,497919
+Total Attributes,21
+Exact Row Duplicates,0
+Duplicate IDs,0
+Shared Case Numbers,51
+Invalid/Unparseable Timestamps,0
+Date Range Min,2024-01-01 00:00:00
+Date Range Max,2025-12-31 23:58:00
+Out-of-Scope Dates (<2024 or >2025),0
+Missing Latitude/Longitude,4904
+"Coordinates (0,0)",0
+Coordinates Out of Chicago Bounds,0
+Missing District,0
+Missing Ward,1
+Missing Community Area,16
+Missing Location Description,2424
+Missing FBI Code,0
+Unique Primary Crime Types,31
+Unique Location Descriptions,134
+Total Arrests Recorded,74379
+Overall Arrest Rate (%),14.94
+Total Domestic Incidents,93093
+Overall Domestic Rate (%),18.7

@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+*.tmp
+.env
+# Keep curated/raw data if desired, or track them

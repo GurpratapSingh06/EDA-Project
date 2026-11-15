@@ -1,0 +1,2 @@
+chicago-crime-dw/data/raw/crimes_2024_2025.csv filter=lfs diff=lfs merge=lfs -text
+chicago-crime-dw/data/curated/crimes_curated.csv filter=lfs diff=lfs merge=lfs -text
