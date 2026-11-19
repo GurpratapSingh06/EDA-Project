@@ -9,6 +9,8 @@ All project code, data, SQL scripts, notebooks, figures, and technical reports a
 Please refer to [`chicago-crime-dw/README.md`](file:///M:/Third%20Year/PEC%20Exploratory%20Data%20Analytics%20LAB/EDA%20Project/chicago-crime-dw/README.md) for full reproduction steps, data lineage, benchmark numbers, and execution instructions.
 
 ### Key Deliverables:
+- **Interactive Streamlit BI Dashboard:** [`chicago-crime-dw/dashboard/app.py`](file:///M:/Third%20Year/PEC%20Exploratory%20Data%20Analytics%20LAB/EDA%20Project/chicago-crime-dw/dashboard/app.py) (`streamlit run dashboard/app.py`)
+- **Power BI Project (.pbip):** [`chicago-crime-dw/powerbi/ChicagoCrimeAnalytics.pbip`](file:///M:/Third%20Year/PEC%20Exploratory%20Data%20Analytics%20LAB/EDA%20Project/chicago-crime-dw/powerbi/ChicagoCrimeAnalytics.pbip)
 - **Comprehensive Technical Report:** [`chicago-crime-dw/docs/technical_report.md`](file:///M:/Third%20Year/PEC%20Exploratory%20Data%20Analytics%20LAB/EDA%20Project/chicago-crime-dw/docs/technical_report.md) and [`chicago-crime-dw/docs/technical_report.docx`](file:///M:/Third%20Year/PEC%20Exploratory%20Data%20Analytics%20LAB/EDA%20Project/chicago-crime-dw/docs/technical_report.docx)
 - **Data Quality Report:** [`chicago-crime-dw/docs/dq_report.md`](file:///M:/Third%20Year/PEC%20Exploratory%20Data%20Analytics%20LAB/EDA%20Project/chicago-crime-dw/docs/dq_report.md)
 - **Data Dictionary:** [`chicago-crime-dw/docs/data_dictionary.md`](file:///M:/Third%20Year/PEC%20Exploratory%20Data%20Analytics%20LAB/EDA%20Project/chicago-crime-dw/docs/data_dictionary.md)

@@ -27,6 +27,16 @@ chicago-crime-dw/
 ├── docker-compose.yml              # PostgreSQL 16 Alpine container definition
 ├── requirements.txt                # Python package dependencies
 ├── README.md                       # Complete reproduction and execution guide
+├── dashboard/
+│   └── app.py                      # Interactive Streamlit BI Dashboard (4-page application)
+├── powerbi/
+│   ├── ChicagoCrimeAnalytics.pbip  # Ready-to-open Power BI Developer Project
+│   ├── generate_pbip.py            # Programmatic PBIP project generator
+│   ├── ChicagoCrimeAnalytics.Report/
+│   │   └── definition.pbir         # Report dataset binding configuration
+│   └── ChicagoCrimeAnalytics.SemanticModel/
+│       ├── definition.pbism        # Semantic model manifest
+│       └── model.bim               # Star schema TMSL definitions and DAX measures
 ├── data/
 │   ├── raw/
 │   │   └── crimes_2024_2025.csv    # 497,919 raw extracted records (103.17 MB)
@@ -206,6 +216,12 @@ for nb_name in ['01_profiling.ipynb', '02_curation.ipynb', '03_eda.ipynb', '04_r
 pandoc docs/technical_report.md -o docs/technical_report.docx
 ```
 
+### Step 14: Launch Interactive Streamlit BI Dashboard
+```bash
+streamlit run dashboard/app.py
+```
+*Launches the browser-based, interactive 4-page Business Intelligence dashboard connecting live to `mart.PublicSafetyAnalyticsMart` on PostgreSQL (with automatic fallback to curated CSV).*
+
 ---
 
 ## 5. Measured Experimental Benchmark Highlights
@@ -225,11 +241,47 @@ pandoc docs/technical_report.md -o docs/technical_report.docx
 
 ---
 
-## 6. Power BI Dashboard Connectivity
+## 6. Dashboard Analytics (Streamlit & Power BI)
 
-To explore the analytical data model in Microsoft Power BI:
-1. Open Power BI Desktop $\longrightarrow$ **Get Data** $\longrightarrow$ **PostgreSQL database**.
-2. Set Server = `localhost:5432`, Database = `chicago_crime_dw`.
-3. Select tables `dw.dimdate`, `dw.dimtime`, `dw.dimcrimetype`, `dw.dimlocation`, `dw.dimincidentcontext`, and view `mart.publicsafetyanalyticsmart` or `dw.factareadailypublicsafety`.
-4. Alternatively, use **Text/CSV** to import files from `outputs/powerbi_exports/`.
-5. Follow the visual canvas layouts and DAX formulas provided in `docs/powerbi_build_guide.md`.
+The project provides two complementary dashboard solutions implementing the same certified 4-page analytical architecture:
+
+### Option A: Interactive Streamlit Web BI Dashboard (Instant Browser Experience)
+
+A complete, production-grade interactive BI application built with Streamlit and Plotly that requires zero BI software installation:
+
+```bash
+# Launch dashboard
+streamlit run dashboard/app.py
+```
+
+* **Dashboard URL:** `http://localhost:8501`
+* **Architecture:**
+  - **Live Warehouse Connection:** Queries the certified view `mart.PublicSafetyAnalyticsMart` via `psycopg2`.
+  - **Resilient Fallback:** Automatically switches to `data/curated/crimes_curated.csv` if the PostgreSQL server is ever stopped.
+  - **Caching:** Uses `@st.cache_data` for sub-second page transitions.
+* **Page Features:**
+  - **Page 1: Executive Overview:** High-level KPI cards (Total Incidents: 497,919; Arrest Rate: 14.94%; Domestic Rate: 18.70%; Night Pct: 30.69%), dual-axis monthly incident volume vs. arrest clearance rate curve, donut chart by crime category, time band bar chart, and dynamic sidebar filters (Year, Quarter, Weekend).
+  - **Page 2: Crime Type & Offenses:** Top 15 statutory offenses by incident volume, offense clearance matrix (scatter plot of volume vs. arrest rate vs. domestic bubble size), and hierarchical treemap (Category $\to$ Primary Type).
+  - **Page 3: Geographic Hotspots:** Police district crime rankings with clearance rate annotations, district by location group matrix (Street, Residence, Commercial, Transit), and Community Area 25 (Austin) high-risk KPI card.
+  - **Page 4: Temporal & Diurnal Heatmap:** 24x7 Day of Week $\times$ Hour matrix heatmap with 3-color conditional gradient, weekday vs. weekend diurnal curves, and peak/nadir hourly analysis.
+
+---
+
+### Option B: Power BI Desktop Project (`.pbip`)
+
+For Microsoft Power BI Desktop users, a ready-to-open developer project is located in `powerbi/`:
+
+1. **Open the Pre-Built Project:**
+   - In Power BI Desktop: **File** $\longrightarrow$ **Open report** $\longrightarrow$ **Browse reports**.
+   - Select `powerbi/ChicagoCrimeAnalytics.pbip`.
+   - All 6 star schema tables, relationships, and 8 pre-calculated DAX measures (`Total Incidents`, `Total Arrests`, `Arrest Rate`, `Domestic Incidents`, `Domestic Rate`, `Night Incidents`, `Night Incident Pct`, `Distinct Crime Types`) are loaded automatically.
+
+2. **Direct PostgreSQL Connection & SSL Setting:**
+   - If connecting directly to PostgreSQL (`localhost:5432;chicago_crime_dw`):
+   - Power BI Desktop defaults to requiring SSL. When the prompt appears:
+     - Click **Cancel** (or **Edit**).
+     - Go to **File** $\longrightarrow$ **Options and settings** $\longrightarrow$ **Data source settings**.
+     - Select `localhost:5432;chicago_crime_dw` $\longrightarrow$ **Edit Permissions...**.
+     - **Uncheck "Encrypt connections"** $\longrightarrow$ Click **OK** $\longrightarrow$ **Close**.
+     - Click **Refresh** to import the certified mart view.
+   - Refer to `docs/powerbi_build_guide.md` for full visual-by-visual canvas build instructions.
