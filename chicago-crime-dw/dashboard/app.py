@@ -72,7 +72,7 @@ def load_data():
         # Fallback to curated CSV
         csv_path = os.path.join(base_dir, "data", "curated", "crimes_curated.csv")
         cols = [
-            "year", "quarter", "month", "month_name", "day_name", "day_of_week", "is_weekend",
+            "year", "quarter", "month", "day_name", "day_of_week", "is_weekend",
             "hour", "time_band", "crime_category_group", "primary_type",
             "district", "community_area", "location_group",
             "arrest_flag", "domestic_flag", "is_night_incident"
